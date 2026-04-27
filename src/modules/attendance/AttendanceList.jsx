@@ -329,7 +329,7 @@ const AttendanceList = () => {
                        <div className="flex items-center gap-4">
                           <div className="h-10 w-10 rounded-full bg-muted flex items-center justify-center font-black text-xs text-foreground border border-border uppercase overflow-hidden">
                              {log.Employee?.profileImage ? (
-                                <img src={`${import.meta.env.VITE_API_BASE_URL || 'http://127.0.0.1:8080'}${log.Employee.profileImage}`} alt="" className="w-full h-full object-cover" />
+                                <img src={`${import.meta.env.VITE_API_BASE_URL || 'https://xtown-hrms.onrender.com'}${log.Employee.profileImage}`} alt="" className="w-full h-full object-cover" />
                              ) : (
                                 log.Employee?.firstName?.charAt(0)
                              )}
@@ -373,7 +373,7 @@ const AttendanceList = () => {
                                           <p className="text-[9px] font-black uppercase tracking-widest text-muted-foreground ml-1">Live Selfie</p>
                                           <div className="aspect-square rounded-2xl overflow-hidden border border-border">
                                             <img 
-                                              src={al.imageUrl?.startsWith('data:') ? al.imageUrl : `${(import.meta.env.VITE_API_BASE_URL || 'http://localhost:8080').replace('127.0.0.1', window.location.hostname)}${al.imageUrl}`} 
+                                              src={al.imageUrl?.startsWith('data:') ? al.imageUrl : `${import.meta.env.VITE_API_BASE_URL || 'https://xtown-hrms.onrender.com'}${al.imageUrl}`} 
                                               className="w-full h-full object-cover scale-x-[-1]" 
                                               alt="Selfie"
                                               onError={(e) => {
@@ -389,7 +389,7 @@ const AttendanceList = () => {
                                           <div className="aspect-square rounded-2xl overflow-hidden border border-emerald-500/20 bg-muted flex items-center justify-center">
                                             {log.Employee?.profileImage ? (
                                               <img 
-                                                src={`${(import.meta.env.VITE_API_BASE_URL || 'http://localhost:8080').replace('127.0.0.1', window.location.hostname)}${log.Employee.profileImage}`} 
+                                                src={`${import.meta.env.VITE_API_BASE_URL || 'https://xtown-hrms.onrender.com'}${log.Employee.profileImage}`} 
                                                 alt="Profile" 
                                                 className="w-full h-full object-cover"
                                                 onError={(e) => {

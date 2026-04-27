@@ -283,7 +283,7 @@ const DocumentVault = () => {
 
                   <div className="flex items-center gap-2 pt-2">
                      <a 
-                       href={`${import.meta.env.VITE_API_BASE_URL || 'http://localhost:8080'}${doc.filePath}`}
+                       href={`${import.meta.env.VITE_API_BASE_URL || 'https://xtown-hrms.onrender.com'}${doc.filePath}`}
                        target="_blank"
                        rel="noopener noreferrer"
                        className="flex-1 py-2 rounded-xl bg-slate-50 hover:bg-slate-100 flex items-center justify-center text-[9px] font-black uppercase tracking-widest transition-all"
@@ -291,7 +291,7 @@ const DocumentVault = () => {
                         <Eye className="h-3 w-3 mr-2" /> Preview
                      </a>
                      <a 
-                       href={`${import.meta.env.VITE_API_BASE_URL || 'http://localhost:8080'}${doc.filePath}`}
+                       href={`${import.meta.env.VITE_API_BASE_URL || 'https://xtown-hrms.onrender.com'}${doc.filePath}`}
                        download
                        className="p-2 rounded-xl bg-primary/5 hover:bg-primary/10 text-primary transition-all"
                      >

@@ -116,7 +116,7 @@ const ProjectFilesModal = ({ project, isOpen, onClose }) => {
     return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
   };
 
-  const API_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8080';
+  const API_URL = import.meta.env.VITE_API_BASE_URL || 'https://xtown-hrms.onrender.com';
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>

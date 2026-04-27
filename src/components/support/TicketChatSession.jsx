@@ -26,7 +26,7 @@ const TicketChatSession = ({ ticket, hideHeader = false, onTypingChange }) => {
 
   useEffect(() => {
     // Initialize Socket Connection
-    const socket = io(import.meta.env.VITE_API_BASE_URL || 'http://localhost:8080', {
+    const socket = io(import.meta.env.VITE_API_BASE_URL || 'https://xtown-hrms.onrender.com', {
       query: { userId: user.id }
     });
     socketRef.current = socket;
@@ -129,7 +129,7 @@ const TicketChatSession = ({ ticket, hideHeader = false, onTypingChange }) => {
     formData.append('file', file);
 
     try {
-      const res = await fetch(`${import.meta.env.VITE_API_BASE_URL || 'http://localhost:8080'}/api/support/upload-attachment`, {
+      const res = await fetch(`${import.meta.env.VITE_API_BASE_URL || 'https://xtown-hrms.onrender.com'}/api/support/upload-attachment`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`

@@ -157,7 +157,7 @@ const Dashboard = ({ title }) => {
     try {
       toast.loading('Opening payslip...', { id: 'payslip' });
       const token = localStorage.getItem('token');
-      const response = await fetch(`${import.meta.env.VITE_API_URL || 'http://127.0.0.1:8080/api'}/payroll/payslip/${payrollId}`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL || 'https://xtown-hrms.onrender.com/api'}/payroll/payslip/${payrollId}`, {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       if (!response.ok) throw new Error('Failed to fetch payslip');

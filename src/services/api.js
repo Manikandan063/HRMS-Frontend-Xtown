@@ -1,4 +1,4 @@
-const BASE_URL = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8080/api';
+const BASE_URL = import.meta.env.VITE_API_URL || 'https://xtown-hrms.onrender.com/api';
 
 /**
  * Enhanced Fetch Wrapper for global API integration
@@ -48,8 +48,10 @@ export async function apiFetch(endpoint, options = {}) {
       data = { message: text || response.statusText };
     }
 
-    // STRICT RULE: Always log response
-    console.log(`API [${options.method || 'GET'}] ${endpoint}:`, data);
+    // STRICT RULE: Log response only in development
+    if (import.meta.env.DEV) {
+      console.log(`API [${options.method || 'GET'}] ${endpoint}:`, data);
+    }
 
     // 3. Application level Error Handling
     if (!response.ok) {

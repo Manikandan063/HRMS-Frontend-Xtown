@@ -158,7 +158,7 @@ const Profile = () => {
       formData.append('image', file);
 
       const token = localStorage.getItem('token');
-      const response = await fetch(`${import.meta.env.VITE_API_URL || 'http://127.0.0.1:8080/api'}/employees/${profileData.id}/profile-image`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL || 'https://xtown-hrms.onrender.com/api'}/employees/${profileData.id}/profile-image`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`
@@ -272,7 +272,7 @@ const Profile = () => {
               <div className="h-full w-full rounded-[2.3rem] bg-slate-900 overflow-hidden flex items-center justify-center relative group/inner">
                 {profileData?.profileImage && !imgError ? (
                   <img 
-                    src={`${(import.meta.env.VITE_API_BASE_URL || 'http://localhost:8080').replace('127.0.0.1', window.location.hostname)}${profileData.profileImage}`} 
+                    src={`${import.meta.env.VITE_API_BASE_URL || 'https://xtown-hrms.onrender.com'}${profileData.profileImage}`} 
                     alt="Profile" 
                     className="h-full w-full object-cover transition-transform duration-700 group-hover/inner:scale-110"
                     onError={() => setImgError(true)}
@@ -606,7 +606,7 @@ const Profile = () => {
                                             Verified
                                         </Badge>
                                         <a 
-                                            href={`${import.meta.env.VITE_API_BASE_URL || 'http://localhost:8080'}${doc.filePath}`}
+                                            href={`${import.meta.env.VITE_API_BASE_URL || 'https://xtown-hrms.onrender.com'}${doc.filePath}`}
                                             target="_blank" 
                                             rel="noreferrer"
                                             className="h-10 w-10 rounded-xl bg-white hover:bg-primary hover:text-white flex items-center justify-center text-slate-400 shadow-sm transition-all"
@@ -614,7 +614,7 @@ const Profile = () => {
                                             <Eye className="h-4 w-4" />
                                         </a>
                                         <a 
-                                            href={`${import.meta.env.VITE_API_BASE_URL || 'http://localhost:8080'}${doc.filePath}`}
+                                            href={`${import.meta.env.VITE_API_BASE_URL || 'https://xtown-hrms.onrender.com'}${doc.filePath}`}
                                             download
                                             className="h-10 w-10 rounded-xl bg-primary/10 hover:bg-primary text-primary hover:text-white flex items-center justify-center shadow-sm transition-all"
                                         >

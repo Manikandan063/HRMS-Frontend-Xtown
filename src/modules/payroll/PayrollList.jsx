@@ -78,7 +78,7 @@ const PayrollList = () => {
   const handleDownloadPayslip = async (id) => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch(`${import.meta.env.VITE_API_URL || 'http://127.0.0.1:8080/api'}/payroll/payslip/${id}`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL || 'https://xtown-hrms.onrender.com/api'}/payroll/payslip/${id}`, {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       

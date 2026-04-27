@@ -151,7 +151,7 @@ const ProjectTeamModal = ({ project, trigger }) => {
                   <div key={m.id} className="p-4 rounded-2xl bg-white border border-slate-100 flex items-center justify-between group hover:border-indigo-200 transition-all shadow-sm">
                      <div className="flex items-center gap-4">
                         <div className="h-10 w-10 rounded-full bg-slate-100 flex items-center justify-center font-black text-[10px] uppercase text-slate-500 overflow-hidden">
-                           {m.profileImage ? <img src={`${import.meta.env.VITE_API_BASE_URL || 'http://127.0.0.1:8080'}${m.profileImage}`} alt="" className="w-full h-full object-cover" /> : (m.firstName ? m.firstName[0] : 'U')}
+                           {m.profileImage ? <img src={`${import.meta.env.VITE_API_BASE_URL || 'https://xtown-hrms.onrender.com'}${m.profileImage}`} alt="" className="w-full h-full object-cover" /> : (m.firstName ? m.firstName[0] : 'U')}
                         </div>
                         <div>
                            <p className="text-sm font-black text-slate-900 tracking-tight">{m.firstName} {m.lastName}</p>

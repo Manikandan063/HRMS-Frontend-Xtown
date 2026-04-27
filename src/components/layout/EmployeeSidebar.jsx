@@ -138,7 +138,7 @@ const EmployeeSidebar = ({ forcedVisible = false }) => {
               <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center font-black text-[10px] uppercase shadow-inner italic text-white border border-white/10 overflow-hidden">
                 {user?.profileImage ? (
                   <img 
-                    src={`${(import.meta.env.VITE_API_BASE_URL || 'http://localhost:8080').replace('127.0.0.1', window.location.hostname)}${user.profileImage}`} 
+                    src={`${import.meta.env.VITE_API_BASE_URL || 'https://xtown-hrms.onrender.com'}${user.profileImage}`} 
                     alt="Me" 
                     className="h-full w-full object-cover" 
                     onError={(e) => {

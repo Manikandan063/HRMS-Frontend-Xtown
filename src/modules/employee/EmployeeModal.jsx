@@ -345,7 +345,7 @@ const EmployeeModal = ({ onSuccess, employee = null, trigger = null, mode = 'vie
                     {employee?.profileImage && !imgError ? (
                       <img 
                         key={employee.profileImage}
-                        src={`${(import.meta.env.VITE_API_BASE_URL || 'http://localhost:8080').replace('127.0.0.1', window.location.hostname)}${employee.profileImage}`} 
+                        src={`${import.meta.env.VITE_API_BASE_URL || 'https://xtown-hrms.onrender.com'}${employee.profileImage}`} 
                         alt="Profile" 
                         className="h-full w-full object-cover" 
                         onError={() => setImgError(true)}
